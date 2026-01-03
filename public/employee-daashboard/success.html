@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Signup Successful</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="box">
+  <h3>Signup Successful</h3>
+
+  <p><b>Company:</b> <span id="company"></span></p>
+  <p><b>Name:</b> <span id="name"></span></p>
+  <p><b>Email:</b> <span id="email"></span></p>
+  <p><b>Phone:</b> <span id="phone"></span></p>
+  <p><b>Joining Year:</b> <span id="year"></span></p>
+
+  <p><b>Your Login ID:</b></p>
+  <h3 id="loginId"></h3>
+
+  <button onclick="goToLogin()">Go to Sign In</button>
+</div>
+
+<script>
+  const user = JSON.parse(localStorage.getItem("newUser"));
+
+  company.innerText = user.company;
+  name.innerText = user.name;
+  email.innerText = user.email;
+  phone.innerText = user.phone;
+  year.innerText = user.year;
+  loginId.innerText = user.loginId;
+
+  function goToLogin() {
+    window.location.href = "login.html";
+  }
+</script>
+
+</body>
+</html>

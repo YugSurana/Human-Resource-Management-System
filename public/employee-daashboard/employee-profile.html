@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Profile</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: "Courier New", monospace;
+    }
+
+    body {
+      margin: 0;
+      background: #0f0f14;
+      color: #eaeaf0;
+    }
+
+    /* ---------- HEADER ---------- */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 24px;
+      background: #1a1625;
+      border-bottom: 1px solid #2e2a40;
+    }
+
+    .top-bar img {
+      height: 38px;
+    }
+
+    .back-btn {
+      background: #6d5dfc;
+      border: none;
+      padding: 8px 14px;
+      color: white;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    /* ---------- PROFILE CARD ---------- */
+    .profile-wrapper {
+      max-width: 900px;
+      margin: 40px auto;
+      background: #1a1625;
+      border-radius: 14px;
+      padding: 30px;
+      border: 1px solid #2e2a40;
+      display: flex;
+      gap: 30px;
+    }
+
+    .profile-left {
+      width: 260px;
+      text-align: center;
+      border-right: 1px solid #2e2a40;
+      padding-right: 25px;
+    }
+
+    /* ✅ FIX: NO BACKGROUND, JUST IMAGE */
+    .profile-left img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #6d5dfc;
+      margin-bottom: 15px;
+      background: none;
+    }
+
+    .status {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+
+    .status.present {
+      color: #2ecc71;
+    }
+
+    .status.absent {
+      color: #e74c3c;
+    }
+
+    /* ---------- RIGHT SIDE ---------- */
+    .profile-right {
+      flex: 1;
+    }
+
+    .profile-right h2 {
+      margin-top: 0;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px 30px;
+    }
+
+    .info-box {
+      background: #0f0f14;
+      padding: 14px;
+      border-radius: 8px;
+      border: 1px solid #2e2a40;
+    }
+
+    .info-box span {
+      display: block;
+      font-size: 13px;
+      color: #bcbad6;
+      margin-bottom: 6px;
+    }
+
+    .info-box strong {
+      font-size: 15px;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <div class="top-bar">
+    <img src="../assets/logo.png" alt="Logo">
+    <button class="back-btn" onclick="history.back()">← Back</button>
+  </div>
+
+  <!-- PROFILE -->
+  <div class="profile-wrapper" id="profileBox">
+    Loading profile...
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const loginId = params.get("loginId");
+
+    fetch("../data.json")
+      .then(res => res.json())
+      .then(data => {
+        const user = data.users.find(u => u.loginId === loginId);
+
+        if (!user) {
+          document.getElementById("profileBox").innerHTML = "User not found";
+          return;
+        }
+
+        const statusClass = user.status === "present" ? "present" : "absent";
+
+        document.getElementById("profileBox").innerHTML = `
+          <div class="profile-left">
+            <!-- ✅ SAME AVATAR AS DASHBOARD -->
+            <img src="avatar.png" alt="Avatar">
+            <h3>${user.name}</h3>
+            <div class="status ${statusClass}">
+              ● ${user.status === "present" ? "Present" : "Absent"}
+            </div>
+          </div>
+
+          <div class="profile-right">
+            <h2>Employee Information</h2>
+
+            <div class="info-grid">
+              <div class="info-box">
+                <span>Login ID</span>
+                <strong>${user.loginId}</strong>
+              </div>
+
+              <div class="info-box">
+                <span>Role</span>
+                <strong>${user.role}</strong>
+              </div>
+
+              <div class="info-box">
+                <span>Company</span>
+                <strong>${user.company}</strong>
+              </div>
+
+              <div class="info-box">
+                <span>Email</span>
+                <strong>${user.email}</strong>
+              </div>
+
+              <div class="info-box">
+                <span>Phone</span>
+                <strong>${user.phone}</strong>
+              </div>
+
+              <div class="info-box">
+                <span>Joining Year</span>
+                <strong>${user.year}</strong>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+  </script>
+
+</body>
+</html>

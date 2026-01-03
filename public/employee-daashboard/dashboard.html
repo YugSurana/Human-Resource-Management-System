@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="dashboard.css">
+  <link rel="icon" href="logo.png" type="image/x-icon">
+</head>
+<body>
+
+<!-- ===== HEADER (FIXED) ===== -->
+<div class="top-bar">
+
+  <div class="left-bar">
+    <img src="logo.png" class="logo">
+
+    <div class="tabs">
+      <span onclick="showEmployees()" id="tab-employees" class="active">Employees</span>
+      <span onclick="showAttendance()" id="tab-attendance">Attendance</span>
+      <span onclick="showTimeOff()" id="tab-timeoff">Time Off</span>
+    </div>
+  </div>
+
+  <div class="right-bar">
+    <div class="tabs">
+      <span onclick="checkIn()">Check In</span>
+      <span onclick="checkOut()">Check Out</span>
+    </div>
+
+    <div class="profile-area">
+      <img src="avatar.png" class="avatar" onclick="toggleMenu()">
+      <div id="profileMenu" class="dropdown">
+        <div onclick="goProfile()">My Profile</div>
+        <div onclick="logout()">Log Out</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== BODY CONTENT (CHANGES) ===== -->
+<div id="content">
+  <!-- Employees loaded by default -->
+  <div id="employeeGrid" class="grid"></div>
+</div>
+
+<script src="dashboard.js"></script>
+</body>
+</html>

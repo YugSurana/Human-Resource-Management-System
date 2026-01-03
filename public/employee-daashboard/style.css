@@ -1,0 +1,118 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", monospace;
+  background-color: #1e1b2e; /* dark purple */
+  color: #eae7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  background-color: #2a2540;
+  padding: 30px;
+  width: 360px;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #1e1b2e;
+  border: 1px solid #9b8cff;
+  border-radius: 6px;
+  color: #eae7ff;
+  font-family: inherit;
+}
+
+input::placeholder {
+  color: #bdb7ff;
+}
+
+label {
+    margin-top: 12px;
+    display: block;
+    font-size: 14px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 18px;
+  background-color: #9b8cff;
+  color: #1e1b2e;
+  border: none;
+  border-radius: 6px;
+  font-family: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #b3aaff;
+}
+
+a {
+  display: block;
+  margin-top: 14px;
+  text-align: center;
+  color: #cfcaff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+/* ---------- ROLE BUTTON BOXES ---------- */
+
+.role-container {
+  display: flex;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.role-box {
+  flex: 1;
+  text-align: center;
+  border: 2px solid #9b8cff;
+  border-radius: 6px;
+  padding: 10px 0;
+  cursor: pointer;
+  background-color: #1e1b2e;
+  color: #eae7ff;
+  transition: all 0.2s ease;
+  font-weight: bold;
+}
+
+/* Hide default radio */
+.role-box input {
+  display: none;
+}
+
+/* Hover effect */
+.role-box:hover {
+  background-color: #2a2540;
+}
+
+/* Selected state */
+.role-box input:checked + span {
+  display: block;
+  background-color: #9b8cff;
+  color: #1e1b2e;
+  border-radius: 4px;
+  padding: 8px 0;
+}
+
