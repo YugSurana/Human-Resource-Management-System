@@ -1,0 +1,112 @@
+{
+  "users": [
+    {
+      "loginId": "OIDORA20250001",
+      "company": "Odoo",
+      "name": "Riya Agarwal",
+      "year": "2025",
+      "email": "riya.agarwal@odoo.com",
+      "phone": "9876543211",
+      "role": "employee",
+      "password": "password123",
+      "status": "absent",
+      "online": false
+    },
+    {
+      "loginId": "OIDOMK20250002",
+      "company": "Odoo",
+      "name": "Mohit Kumar",
+      "year": "2025",
+      "email": "mohit.kumar@odoo.com",
+      "phone": "9876543212",
+      "role": "employee",
+      "password": "password123",
+      "status": "present",
+      "online": false
+    },
+    {
+      "loginId": "OIDOSG20250003",
+      "company": "Odoo",
+      "name": "Sneha Gupta",
+      "year": "2025",
+      "email": "sneha.gupta@odoo.com",
+      "phone": "9876543213",
+      "role": "employee",
+      "password": "password123",
+      "status": "present",
+      "online": true
+    },
+    {
+      "loginId": "OIDOAK20250004",
+      "company": "Odoo",
+      "name": "Aman Khanna",
+      "year": "2025",
+      "email": "aman.khanna@odoo.com",
+      "phone": "9876543214",
+      "role": "employee",
+      "password": "password123",
+      "status": "absent",
+      "online": false
+    },
+    {
+      "loginId": "OIDOPJ20250005",
+      "company": "Odoo",
+      "name": "Pooja Jain",
+      "year": "2025",
+      "email": "pooja.jain@odoo.com",
+      "phone": "9876543215",
+      "role": "employee",
+      "password": "password123",
+      "status": "present",
+      "online": true
+    },
+    {
+      "loginId": "OIDORS20250006",
+      "company": "Odoo",
+      "name": "Rahul Sharma",
+      "year": "2025",
+      "email": "rahul.sharma@odoo.com",
+      "phone": "9876543216",
+      "role": "employee",
+      "password": "password123",
+      "status": "present",
+      "online": false
+    },
+    {
+      "loginId": "OIDONP20250007",
+      "company": "Odoo",
+      "name": "Neha Patel",
+      "year": "2025",
+      "email": "neha.patel@odoo.com",
+      "phone": "9876543217",
+      "role": "employee",
+      "password": "password123",
+      "status": "absent",
+      "online": false
+    },
+    {
+      "loginId": "OIDOVM20250008",
+      "company": "Odoo",
+      "name": "Vikas Mehta",
+      "year": "2025",
+      "email": "vikas.mehta@odoo.com",
+      "phone": "9876543218",
+      "role": "employee",
+      "password": "password123",
+      "status": "present",
+      "online": true
+    },
+    {
+      "loginId": "OIDOHR20250009",
+      "company": "Odoo",
+      "name": "Harsh Raj",
+      "year": "2025",
+      "email": "harsh.raj@odoo.com",
+      "phone": "9876543219",
+      "role": "admin",
+      "password": "admin123",
+      "status": "present",
+      "online": true
+    }
+  ]
+}
