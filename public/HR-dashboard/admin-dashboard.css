@@ -1,0 +1,93 @@
+* {
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+}
+
+body {
+  margin: 0;
+  background: #0f0f1a;
+  color: #eaeaea;
+}
+
+/* CENTER WRAPPER */
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* CARD */
+.login-card {
+  background: #1a1a2e;
+  width: 420px;
+  padding: 40px;
+  border-radius: 14px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+  text-align: center;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo {
+  height: 42px;
+  margin-bottom: 20px;
+}
+
+.login-card h2 {
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #b5b5c9;
+  margin-bottom: 28px;
+}
+
+/* INPUTS */
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  border: 1px solid #2e2e4d;
+  background: #121225;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+.login-card input::placeholder {
+  color: #7d7da8;
+}
+
+/* BUTTON */
+.login-card button {
+  width: 100%;
+  padding: 12px;
+  background: #6d5dfc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.login-card button:hover {
+  background: #5848e5;
+}
+/* ADMIN EXIT BUTTON */
+.exit-btn {
+  background: transparent;
+  border: 1px solid #6d5dfc;
+  color: #6d5dfc;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: "Courier New", monospace;
+}
+
+.exit-btn:hover {
+  background: #6d5dfc;
+  color: #6d5dfc;
+}
